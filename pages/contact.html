@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Título da página</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <title>CONTATO</title>
     <meta charset="utf-8">
   </head>
   <body>
-    <script src="js/main.js"></script>
-    <script src="js/interaction.js"></script>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/index.html" target="_blank">Início</a></li>
+        <li><a href="./about.html" target="_blank">Sobre</a></li>
+        <li><a href="./solutions.html" target="_blank">Soluções</a></li>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h3>Faça sua denúncia</h3>
+        <p>A partir do formulário abaixo preencha com informações a respeito de uma situação de exclusão escolar ocorrida</p>
+        <form action="/enviar" method="POST" id="denunciaForm">
+          <!--Parte do forms com o nome-->
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
+          <!--Parte do forms com o Email-->
+          <label for="email">E-mail</label>
+          <input type="text" id="email" name="email" placeholder="Digite seu E-mail" required>
+          <!--Parte do forms com o Telefone-->
+          <label for="telefone">Telefone (celular)</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="Digite seu Telefone" required>
+          <!--ASSUNTO DO FORMS-->
+          <label for="tipo">Tipo de Exclusão Escolar</label>
+          <select id="tipo" name="tipo">
+            <option value="transporte">Falta de transporte escolar</option>
+            <option value="discriminacao">Discriminação</option>
+            <option value="Complicacoes financeiras">Complicações Financeiras</option>
+            <option value="infraestrutura">Infraestrutura Inadequada</option>
+            <option value="outros">Outros</option>
+          </select>
+          <!--label para descrição-->
+          <label for="descricao">Descrição do ocorrido:</label>
+          <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva aqui:"></textarea>
+          <!--botão para enviar o forms-->
+          <button type="submit">Enviar denúncia</button>
+          <!--modal para confirmar envio-->
+          <div id="modal" class="modal">
+            <div class="conteudo-modal"
+              <span class="close" id="closeModal">&times;</span>
+              <p>Denúncia Enviada!</p>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="/js/contact.js"></script>
   </body>
 </html>

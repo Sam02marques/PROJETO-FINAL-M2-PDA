@@ -5,14 +5,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Open Sans";
   }
 
 body {
     background-color: #fafbfc;
-    display: flex;
-}
-
-header{
-    background-color: #050c29;
     display: flex;
 }

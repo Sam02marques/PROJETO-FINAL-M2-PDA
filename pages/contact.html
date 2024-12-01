@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="/css/contact.css">
     <title>CONTATO</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+  <section class="container">
     <header>
       <nav>
         <ul>
@@ -20,26 +22,39 @@
         <p>A partir do formulário abaixo preencha com informações a respeito de uma situação de exclusão escolar ocorrida</p>
         <form action="/enviar" method="POST" id="denunciaForm">
           <!--Parte do forms com o nome-->
-          <label for="nome">Nome Completo</label>
-          <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
+          <div class="input-box">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
+          </div>
           <!--Parte do forms com o Email-->
-          <label for="email">E-mail</label>
-          <input type="text" id="email" name="email" placeholder="Digite seu E-mail" required>
+          <div class="input-box">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu E-mail" required>
+          </div>
           <!--Parte do forms com o Telefone-->
-          <label for="telefone">Telefone (celular)</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="Digite seu Telefone" required>
+          <div class="column">
+            <div class="input-box">
+              <label for="telefone">Telefone (celular)</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="Digite seu Telefone" required>
+              </div>
+          </div>
           <!--ASSUNTO DO FORMS-->
+          
           <label for="tipo">Tipo de Exclusão Escolar</label>
-          <select id="tipo" name="tipo">
-            <option value="transporte">Falta de transporte escolar</option>
-            <option value="discriminacao">Discriminação</option>
-            <option value="Complicacoes financeiras">Complicações Financeiras</option>
-            <option value="infraestrutura">Infraestrutura Inadequada</option>
-            <option value="outros">Outros</option>
-          </select>
+          <div id="select-box">
+            <select>
+              <option value="transporte">Falta de transporte escolar</option>
+              <option value="discriminacao">Discriminação</option>
+              <option value="Complicacoes financeiras">Complicações Financeiras</option>
+              <option value="infraestrutura">Infraestrutura Inadequada</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
           <!--label para descrição-->
-          <label for="descricao">Descrição do ocorrido:</label>
-          <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva aqui:"></textarea>
+          <div class="input-box">
+            <label for="descricao">Descrição do ocorrido:</label>
+            <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva aqui:"></textarea>
+          </div>
           <!--botão para enviar o forms-->
           <button type="submit">Enviar denúncia</button>
           <!--modal para confirmar envio-->
@@ -52,6 +67,7 @@
         </form>
       </section>
     </main>
+  </section>
     <script src="/js/contact.js"></script>
   </body>
 </html>

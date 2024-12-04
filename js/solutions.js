@@ -1,6 +1,4 @@
-// const page = document.getElementById("bodyHTML");
-// const btnContato = document.getElementById("ctaButton");
-// const solutionsContainer = document.getElementById("solutions");
+// lista de objetos com os títulos e textos de cada solução proposta
 const texts = [
 {
     id:0,
@@ -46,11 +44,12 @@ const texts = [
     id:9,
     titulo: "Aprimoramento do Ensino Médio",
     texto: "É urgente o aprimoramento da proposta do Novo Ensino Médio que hoje tramita no Congresso e que teria o potencial de provocar mudanças nesta etapa de ensino para tornar o ensino mais atraente, bem como articulado com o mundo do trabalho."
-}] // lista de objetos com os títulos e textos de cada solução proposta
+}] 
     
 let interval = 100; // tempo em milissegundos
 let counter = 0
 
+// Função para exibir o texto gradualmente
 function showText(el, text, interval) {
     let char = text.split("").reverse();
     let typer = setInterval(function() {
@@ -62,8 +61,8 @@ function showText(el, text, interval) {
     }, interval);
 }
 
-// script.js
 let currentIndex = 0;
+
 // Função para atualizar o cartão exibido
 function updateCard() {
     const titleElement = document.getElementById("card-title");
@@ -72,11 +71,6 @@ function updateCard() {
     const currentCard = texts[currentIndex];
     titleElement.textContent = currentCard.titulo;
     descriptionElement.textContent = currentCard.texto;
-    // titleElement.innerHTML = "";
-    // descriptionElement.innerHTML = "";
-
-    // showText(titleElement, currentCard.titulo, 30);
-    // descriptionElement.textContent = currentCard.texto;
 }
   
 // Função para ir ao cartão anterior
@@ -95,11 +89,11 @@ function goToNext() {
 document.body.innerHTML = `
     <header>
       <nav id="navegation">
-        <ul id="listNavegation">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="about.html" target="_blank">Sobre</a></li>
-          <!-- <li><a href="pages/solutions.html" target="_blank">Soluções</a></li> -->
-          <li><a href="contact.html" target="_blank">Contato</a></li>
+        <ul class="listHeader">
+          <li><a class="navItem" href="../index.html">Início</a></li>
+          <li><a class="navItem" href="about.html" target="_blank">Sobre</a></li>
+          <!-- <li><a class="navItem" href="pages/solutions.html" target="_blank">Soluções</a></li> -->
+          <li><a class="navItem" href="contact.html" target="_blank">Contato</a></li>
         </ul>
       </nav>
     </header>
@@ -125,7 +119,21 @@ document.body.innerHTML = `
     </main>
 
     <footer>
-      <p>© 2024 - Desenvolvido por SQUAD 5</p>
+        <section id="mainFooter">
+            <h1>EDUCAÇÃO PARA TODOS</h1>
+            <ul class="listFooter">
+                <li><a class="footerItem" href="/index.html" target="_blank">Início</a></li>
+                <li><a class="footerItem" href="/pages/about.html">Sobre</a></li>
+                <li><a class="footerItem" href="/pages/solutions.html" target="_blank">Soluções</a></li>
+                <li><a class="footerItem" href="/pages/contact.html" target="_blank">Contato</a></li>
+            </ul>
+            <p>
+                <a href="mailto:contato@squad5.gmail.com">
+                    <i class="bi bi-google"></i>
+                </a>
+            </p>
+        </section>
+        <p id="copyright"> &copy; 2024 Todos os direitos reservados.</p>
     </footer>
 `;
   

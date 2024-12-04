@@ -1,8 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 * {
-    padding: 0;
+    border: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+body {
+    background-color: #fafbfc;
+}
+/* header estilo */
+header{
+    background-color: #050c29;
+}
+
+.listHeader{
+    display: flex;
+    justify-content: space-between;
     list-style: none;
+    padding: 1.5rem 25rem 1.5rem 25rem ;
+}
+
+.navItem{
     text-decoration: none;
-    overflow: hidden;
+    color: #fafbfc;
+    font-weight: bold;
+    position: relative;
+}
+
+.navItem::after{
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: #fafbfc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.navItem:hover::after{
+    width: 100%;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #050c29;
+    padding-top: 1.8rem;
+}
+
+footer h1{
+    font-size: 1.3rem;
+    color: #fa8035;
+}
+
+#mainFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listFooter {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+    margin: 0.9rem 0 1.3rem 0;
+}
+
+.footerItem, footer p{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #fafbfc;
+}
+
+footer i{
+    font-size: 1.4rem;
+    color: #fafbfc;
+}
+
+.footerItem:hover, #principalFooter p:hover, i:hover{
+    color: #a4a4a4;
+}
+
+#copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+    background-color: #010720;
+    height: 3rem;
 }

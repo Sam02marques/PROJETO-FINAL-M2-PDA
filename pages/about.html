@@ -4,63 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre</title>
-  <link rel="stylesheet" href="/css/about.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/global.css"> <!--css global-->
+  <link rel="stylesheet" href="/css/about.css"> <!--css da pagina-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!--bootstrap-->
 </head>
 
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="/pages/about.html">Sobre</a></li>
-        <li><a href="/index.html" target="_blank">Início</a></li>
-        <li><a href="/pages/solutions.html" target="_blank">Soluções</a></li>
-        <li><a href="/pages/contact.html" target="_blank">Contato</a></li>
+      <ul class="listHeader">
+        <li><a class="navItem" href="/index.html" target="_blank">Início</a></li>
+        <li><a class="navItem" href="/pages/about.html">Sobre</a></li>
+        <li><a class="navItem" href="/pages/solutions.html" target="_blank">Soluções</a></li>
+        <li><a class="navItem" href="/pages/contact.html" target="_blank">Contato</a></li>
       </ul>
     </nav>
   </header>
 
 <main>
-  <section id="main"> <!--seção principal-->
+  <article>
     <h1>O que é o hackaton?</h1>
     <h2>"A educação é a arma mais poderosa que você pode usar para mudar o mundo."</h2>
-    <p>Nelson Mandela</p>
+    <p>-Nelson Mandela</p>
     <img src="/images/estudantes.jpg" alt="imagem de estudantes felizes numa sala de aula">
+  </article>
 
-    <article>
-      <h3>O combate</h3>
-      <p>A exclusão escolar continua sendo um desafio significativo nas escolas brasileiras, 
+  <section class="texts">
+    <p>A exclusão escolar continua sendo um desafio significativo nas escolas brasileiras, 
         especialmente nas instituições públicas,
         afetando milhões de crianças, jovens e adultos que enfrentam diversas barreiras sociais,
         econômicas e tecnológicas.</p>
-    </article>
 
-    <article>
-      <h3>Dados</h3>
-      <p>A exclusão escolar continua sendo um desafio significativo nas escolas brasileiras,
-          especialmente nas instituições públicas, afetando milhões de crianças, jovens e adultos que 
-          enfrentam diversas barreiras sociais, econômicas e tecnológicas. 
-          Segundo o Instituto Ayrton Senna e o Censo 2022, quase 70 milhões de brasileiros de 18 anos
+    <p>Segundo o Instituto Ayrton Senna e o Censo 2022, quase 70 milhões de brasileiros de 18 anos
           ou mais estão fora da escola ou não concluíram a educação básica.
           Entre as possíveis causas para esse cenário, estão dificuldades enfrentadas por suas famílias, 
           levando à busca por emprego, ausências frequentes, reprovações, falta de conexão com a escola, 
           gravidez na adolescência, entre outros fatores. </p>
-    </article>
-  
-    <article>
-      <h3>Transformando</h3>
-      <p>Em resposta a esses desafios, o projeto de Hackathon Educação para Todos surge como uma 
+
+    <p>Em resposta a esses desafios, o projeto de hackathon <strong>Educação para Todos</strong> surge como uma 
           iniciativa inovadora, reunindo programadores, designers, e educadores com o objetivo de desenvolver 
           soluções tecnológicas para apoiar os alunos. Este projeto visa, entre outros objetivos, combater 
           a evasão escolar, promover a inclusão digital, disponibilizar material pedagógico gratuito e 
           melhorar a acessibilidade educacional, com o intuito de transformar a sociedade por meio da educação. </p>
-    </article>
-
-  </section> <!--seção principal-->
+  </section>
 </main>
 
 <footer>
-  <p>&copy; 2024 Todos os direitos reservados.</p>
+  <h3>EDUCAÇÃO PARA TODOS</h3>
+  <ul class="listFooter">
+    <li><a class="footerItem" href="/index.html" target="_blank">Início</a></li>
+    <li><a class="footerItem" href="/pages/about.html">Sobre</a></li>
+    <li><a class="footerItem" href="/pages/solutions.html" target="_blank">Soluções</a></li>
+    <li><a class="footerItem" href="/pages/contact.html" target="_blank">Contato</a></li>
+  </ul>
+  <p>
+    <a href="mailto:contato@squad5.gmail.com">
+      <i class="bi bi-google"></i>
+    </a>
+  </p>
+  <p id="copyright"> &copy; 2024 Todos os direitos reservados.</p>
 </footer>
 
 </body>

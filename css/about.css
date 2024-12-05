@@ -1,14 +1,33 @@
-/*estilo geral*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-* {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open Sans";
-  }
-
-body {
-    background-color: #fafbfc;
+main {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 3rem 20rem 3rem 20rem;
+}
+
+img{
+    max-width: 24rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+h1{
+    color:#010101;
+    font-size: 2.5rem;
+}
+
+h2{
+    color: #fa8035;
+    font-size: 1.5rem;
+}
+
+p{
+    color:#0e0e0e;
+    font-size: 1rem;
+} 
+
+.texts p{
+    margin-top:1rem;
 }

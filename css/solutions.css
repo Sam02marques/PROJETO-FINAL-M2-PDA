@@ -1,12 +1,11 @@
 body {
     height: auto;
-    width: 100%;
+    width: 100vw;
     overflow-y: auto;
     overflow-x: hidden;
-}
-
-#navegation {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #next-button:hover, #prev-button:hover, #cta > button:hover {
@@ -43,20 +42,19 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* #copyright{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    background-color: #010720;
-    height: 2rem;
-} */
+.listHeader {
+    width: 60%;
+}
+
+.listHeader > li {
+    margin: 3px 20px 3px 20px;
+}
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:auto;
+    height: auto;
     width: 100%;
     background-color: #bf8d31;
 }
@@ -108,31 +106,65 @@ body {
     text-align: justify;
 }
 
+.listFooter{
+    align-items: center;
+    width: 60%;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.listFooter > li {
+    margin: 2rem 2rem 1.5rem 2rem;
+}
+
+header {
+    width: 90dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    /* CSS */
+}
+
 @media (min-width: 760px) {
+    body {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        justify-content: center;
+    }
+
     #next-button {
         right: 20px;
-        margin-top: 20px
     }
 
     .listHeader {
+        width: 80dvw;
         display: flex;
         justify-content: center;
     }
 
     .listHeader > li {
-        margin: 10px 50px 10px 40px;
+        margin: 10px 80px 10px 80px;
     }
 
     #prev-button {
         left: 20px;
-        margin-top: 20px
     }
     
     #cta {
         position: absolute;
-        top: 57vh;
-        height: 15vh;
-        margin-top: 4rem;
+        top: 62vh;
+        height: 20vh;
+        margin-top: 2rem;
         gap: 0.8rem;
     }
 
@@ -147,35 +179,19 @@ body {
     }
 
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 75vh;
-        width: 100%;
-        background-color: #bf8d31;
+        height: 77vh;
     }
 
     .card {
-        position: relative;
-        top: 5vh;
-        width: 90%;
-        min-height: 30vh;
+        min-height: 45vh;
         height: fit-content;
-        background: rgb(255, 255, 255);
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        padding: 20px;
-        text-align: center;
     }
 
     .card-header h2 {
-        position: relative;
-        margin: 0 0 20px;
         font-size: 2.1rem;
     }
 
     .card-header p {
-        position: relative;
         font-size: 1.6rem;
     }
 
@@ -191,6 +207,31 @@ body {
     .card-header h2, .card-header p {
         text-align: justify;
     }
+
+    .listFooter {
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .listFooter > li > a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    #cta {
+        position: absolute;
+        top: 73vh;
+    }
+
+    .container {
+        height: 89vh;
+    }
+
+    .listFooter {
+        justify-content: center;
+        gap: 4rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -200,80 +241,43 @@ body {
         overflow-y: auto;
     }
 
-    #copyright{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0.5rem;
-        background-color: #010720;
-        height: 2rem;
-    }
-
     #cta {
-        display: flex;
-        flex-direction: column;
-        background-color: transparent;
-        position: absolute;
-        justify-content: center;
-        width: 65vw;
-        height: 20vh;
-        margin-top: 4.5rem;
+        height: 22vh;
+        top: 67vh;
         gap: 0.8rem;
     }
 
-    #cta > button {
-        height: 5vh;
-    }
-
-    #prev-button {
-        left: 20px;
-    }
-
-    #next-button {
-        right: 20px;
-        
-    }
-
-    .button {
-        position: absolute;
-        bottom: 20px;
-    }
-
     .card {
-        position: relative;
-        top: 5vh;
-        width: 90%;
-        height: 50vh;
-        background: rgb(255, 255, 255);
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        padding: 20px;
-        text-align: center;
+        height: 52vh;
     }
 
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 75vh;
-        width: 100%;
-        background-color: #bf8d31;
+        height: 85vh;
     }
 
     .card-header h2 {
         font-size: 2rem;
     }
+
+    .listFooter {
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .listFooter > li > a {
+        font-size: 1.3rem;
+    }
 }
 
 @media (min-width: 1400px) {
     #cta > button {
-        height: px;
+        height: 60px;
         width: 200px;
         font-size: 1.2rem;
     }
 
     #cta {
-        margin-top: 10px;
+        margin-top: 3.5rem;
         gap: 1rem;
         padding-bottom: 1.5rem;
     }
@@ -282,5 +286,18 @@ body {
         height: 50px;
         width: 150px;   
         font-size: 1.2rem;
+    }
+
+    .listFooter{
+        gap: 8rem;
+        justify-content: center;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .listHeader {
+        gap: 10rem;
     }
 }

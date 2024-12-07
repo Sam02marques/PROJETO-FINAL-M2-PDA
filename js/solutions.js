@@ -45,21 +45,6 @@ const texts = [
     titulo: "Aprimoramento do Ensino Médio",
     texto: "É urgente o aprimoramento da proposta do Novo Ensino Médio que hoje tramita no Congresso e que teria o potencial de provocar mudanças nesta etapa de ensino para tornar o ensino mais atraente, bem como articulado com o mundo do trabalho."
 }] 
-    
-let interval = 100; // tempo em milissegundos
-let counter = 0
-
-// Função para exibir o texto gradualmente
-const showText = (el, text, interval) => {
-    let char = text.split("").reverse();
-    let typer = setInterval(function() {
-        if (!char.length) {
-            return clearInterval(typer);
-        }
-        let next = char.pop();
-        el.innerHTML += next;
-    }, interval);
-}
 
 let currentIndex = 0;
 
@@ -125,7 +110,7 @@ document.body.innerHTML = `
             <ul class="listFooter">
                 <li><a class="footerItem" href="/index.html" target="_blank">Início</a></li>
                 <li><a class="footerItem" href="/pages/about.html">Sobre</a></li>
-                <li><a class="footerItem" href="/pages/solutions.html" target="_blank">Soluções</a></li>
+                <!-- <li><a class="footerItem" href="/pages/solutions.html" target="_blank">Soluções</a></li> -->
                 <li><a class="footerItem" href="/pages/contact.html" target="_blank">Contato</a></li>
             </ul>
             <p>

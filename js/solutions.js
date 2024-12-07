@@ -50,7 +50,7 @@ let interval = 100; // tempo em milissegundos
 let counter = 0
 
 // Função para exibir o texto gradualmente
-function showText(el, text, interval) {
+const showText = (el, text, interval) => {
     let char = text.split("").reverse();
     let typer = setInterval(function() {
         if (!char.length) {
@@ -64,7 +64,7 @@ function showText(el, text, interval) {
 let currentIndex = 0;
 
 // Função para atualizar o cartão exibido
-function updateCard() {
+const updateCard = () => {
     const titleElement = document.getElementById("card-title");
     const descriptionElement = document.getElementById("card-description");
   
@@ -74,15 +74,19 @@ function updateCard() {
 }
   
 // Função para ir ao cartão anterior
-function goToPrevious() {
+const goToPrevious = () => {
     currentIndex = currentIndex > 0 ? currentIndex - 1 : texts.length - 1;
     updateCard();
 }
   
 // Função para ir ao próximo cartão
-function goToNext() {
+const goToNext = () => {
     currentIndex = currentIndex < texts.length - 1 ? currentIndex + 1 : 0;
     updateCard();
+}
+
+const goToContact = () => {
+    window.location.href = 'contact.html';
 }
   
 // Criando o layout do cartão
@@ -103,9 +107,6 @@ document.body.innerHTML = `
             <article class="card-header">
                 <h2 id="card-title"></h2>
                 <p id="card-description"></p>
-            </article>
-            <article class="card-content">
-                <p id="card-content"></p>
             </article>
             <article class="card-footer">
                 <button id="prev-button" class="button">Previous</button>
@@ -140,6 +141,7 @@ document.body.innerHTML = `
 // Adicionando eventos aos botões
 document.getElementById("prev-button").addEventListener("click", goToPrevious);
 document.getElementById("next-button").addEventListener("click", goToNext);
+document.getElementById("ctaButton").addEventListener("click", goToContact);
   
 // Inicializando o cartão
 updateCard();

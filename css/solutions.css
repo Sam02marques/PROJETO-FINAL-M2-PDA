@@ -1,53 +1,12 @@
 body {
-    height: 100vh;
+    height: auto;
     width: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
-#listNavegation {
+#navegation {
     width: 100%;
-    display: flex;
-    gap: 1rem;
-    justify-content: space-evenly;
-}
-
-#listNavegation > li > a {
-    color: white;
-    font-size: 1.45rem;
-}
-
-#listNavegation > li > a:hover {
-    color: rgb(0, 0, 0);
-}
-
-#prev-button {
-    position: absolute;
-    background: rgb(0, 123, 255);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    left: 20px;
-    bottom: 20px;
-    width: 100px;
-    height: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-#next-button {
-    position: absolute;
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    right: 20px;
-    bottom: 20px;
-    width: 100px;
-    height: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 #next-button:hover, #prev-button:hover, #cta > button:hover {
@@ -59,17 +18,19 @@ body {
     display: flex;
     flex-direction: column;
     background-color: transparent;
-    position: absolute;
+    position: relative;
     justify-content: center;
     width: 65vw;
-    height: 18vh;
-    top: 58vh;
+    height: auto;
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+    gap: 0.4rem;
 }
 
 #cta > h2 {
-    position: absolute;
+    position: relative;
     font-size: 1.7rem;
-    top: 10%;
+    margin-top: 10px;
 }
 
 #cta > button {
@@ -82,20 +43,20 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-#copyright{
+/* #copyright{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
     background-color: #010720;
     height: 2rem;
-}
+} */
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 72.5vh;
+    height:auto;
     width: 100%;
     background-color: #bf8d31;
 }
@@ -104,13 +65,13 @@ body {
     position: relative;
     top: 5vh;
     width: 90%;
-    height: 45vh;
+    height: 80%;
     background: rgb(255, 255, 255);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
-    text-align: justify;
+    /* justify-content: center; */
 }
 
 .card-header h2 {
@@ -121,7 +82,7 @@ body {
 
 .card-header p {
     position: relative;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 .card-footer {
@@ -130,78 +91,196 @@ body {
     justify-content: space-between;
 }
 
-footer {
-    bottom: 0;
-    padding-top: 1.8rem;
-} 
-
-/* Mobile First - Base para dispositivos móveis */
-@media (max-width: 575px) {
-    #listNavegation {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.5rem;
-    }
-
-    #prev-button, #next-button {
-        width: 80px;
-        height: 35px;
-        font-size: 0.9rem;
-    }
-
-    #cta {
-        width: 90vw;
-        height: auto;
-        padding: 1rem;
-    }
-
-    #cta h2 {
-        font-size: 1.2rem;
-        position: relative;
-    }
-
-    .card {
-        top: 2vh;
-        height: auto;
-        min-height: 45vh;
-        padding: 15px;
-    }
+.button {
+    background: rgb(0, 123, 255);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Tablets */
-@media (min-width: 576px) and (max-width: 991px) {
-    .container {
-        padding: 15px;
-        height: auto;
-        min-height: 72.5vh;
+.card-header h2, .card-header p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+@media (min-width: 760px) {
+    #next-button {
+        right: 20px;
+        margin-top: 20px
     }
 
-    .card {
-        width: 95%;
-        padding: 15px;
+    .listHeader {
+        display: flex;
+        justify-content: center;
     }
 
+    .listHeader > li {
+        margin: 10px 50px 10px 40px;
+    }
+
+    #prev-button {
+        left: 20px;
+        margin-top: 20px
+    }
+    
     #cta {
-        width: 80vw;
+        position: absolute;
+        top: 57vh;
+        height: 15vh;
+        margin-top: 4rem;
+        gap: 0.8rem;
     }
 
-    .card-header h2 {
+    #cta > h2 {
+        font-size: 2rem;
+    }
+
+    #cta > button {
+        height: 60px;
+        width: 250px;
         font-size: 1.3rem;
     }
 
-    .card-header p {
-        font-size: 1rem;
-    }
-}
-
-/* Desktop */
-@media (min-width: 992px) {
     .container {
-        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 75vh;
+        width: 100%;
+        background-color: #bf8d31;
     }
 
     .card {
-        width: 80%;
-        max-width: 1200px;
+        position: relative;
+        top: 5vh;
+        width: 90%;
+        min-height: 30vh;
+        height: fit-content;
+        background: rgb(255, 255, 255);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .card-header h2 {
+        position: relative;
+        margin: 0 0 20px;
+        font-size: 2.1rem;
+    }
+
+    .card-header p {
+        position: relative;
+        font-size: 1.6rem;
+    }
+
+    .button {
+        font-size: 1.3rem;
+        height: 45px;
+        width: 150px;
+        position: absolute;
+        bottom: 20px;
+        margin-top: 50px;
+    }
+
+    .card-header h2, .card-header p {
+        text-align: justify;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        min-height: 100vh;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    #copyright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.5rem;
+        background-color: #010720;
+        height: 2rem;
+    }
+
+    #cta {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        position: absolute;
+        justify-content: center;
+        width: 65vw;
+        height: 20vh;
+        margin-top: 4.5rem;
+        gap: 0.8rem;
+    }
+
+    #cta > button {
+        height: 5vh;
+    }
+
+    #prev-button {
+        left: 20px;
+    }
+
+    #next-button {
+        right: 20px;
+        
+    }
+
+    .button {
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .card {
+        position: relative;
+        top: 5vh;
+        width: 90%;
+        height: 50vh;
+        background: rgb(255, 255, 255);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 75vh;
+        width: 100%;
+        background-color: #bf8d31;
+    }
+
+    .card-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    #cta > button {
+        height: px;
+        width: 200px;
+        font-size: 1.2rem;
+    }
+
+    #cta {
+        margin-top: 10px;
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .button {
+        height: 50px;
+        width: 150px;   
+        font-size: 1.2rem;
     }
 }

@@ -31,3 +31,18 @@ p{
 .texts p{
     margin-top:1rem;
 }
+
+@media (min-width: 320px) and (max-width: 1280px){
+    main{
+        width:auto ;
+        margin: 0 0.7rem 0 0.7rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    img{
+     min-width: 17rem;
+     max-width: auto;
+     margin: 0 0.rem 0 0.2rem;
+    }
+}

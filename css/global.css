@@ -105,7 +105,7 @@ footer i {
     width: 100%;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 500px) {
     footer {
         display: flex;
         flex-direction: column;
@@ -145,6 +145,10 @@ nav{
     z-index: 1000;
 }
 
+nav{
+    margin-bottom: 10%;
+}
+
 .navBarContainer{
     display: none;
     width: 100vw;
@@ -166,4 +170,8 @@ nav{
     display: flex;
 }
 
+}
+
+@media (max-width: 1000px){
+    
 }

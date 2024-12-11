@@ -17,10 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "none";
     });
 
-    // Fechar o modal ao clicar fora dele
-    window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.style.display = "none";
-}
-    });
 });

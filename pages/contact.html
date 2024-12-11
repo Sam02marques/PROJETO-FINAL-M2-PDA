@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/css/contact.css">
     <title>CONTATO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-  <section class="container">
     <header>
       <nav>
-        <ul>
-          <li><a href="/index.html" target="_blank">Início</a></li>
-        <li><a href="./about.html" target="_blank">Sobre</a></li>
-        <li><a href="./solutions.html" target="_blank">Soluções</a></li>
-      </nav>
+        <div class="navBarContainer"> <!--usado para a responsividade do menu hamburguer em mobiles-->
+          <ul class="listHeader">
+            <li><a class="navItem" href="/index.html" target="_blank">Início</a></li>
+            <li><a class="navItem" href="/pages/about.html">Sobre</a></li>
+            <li><a class="navItem" href="/pages/solutions.html" target="_blank">Soluções</a></li>
+            <li><a class="navItem" href="/pages/contact.html" target="_blank">Contato</a></li>
+          </ul>
+        </div>
+        <button class="navMobile">&#9776;</button> <!--botao hamburguer-->
     </header>
-    <main>
-      <section>
-        <h3>Faça sua denúncia</h3>
-        <p>A partir do formulário abaixo preencha com informações a respeito de uma situação de exclusão escolar ocorrida</p>
-        <form action="/enviar" method="POST" id="denunciaForm">
+    <section id="containerPrincipal">
+    <section class="container">
+      <main>
+        <section>
+          <h3>Faça sua denúncia</h3>
+          <p>A partir do formulário abaixo preencha com informações a respeito de uma situação de exclusão escolar ocorrida</p>
+          <form action="/enviar" method="POST" id="denunciaForm">
           <!--Parte do forms com o nome-->
           <div class="input-box">
             <label for="nome">Nome Completo</label>
@@ -52,7 +58,7 @@
           </div>
           <!--label para descrição-->
           <div class="input-box">
-            <label for="descricao">Descrição do ocorrido:</label>
+            <label for="descricao" id="descricaoId">Descrição do ocorrido:</label>
             <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva aqui:"></textarea>
           </div>
           <!--botão para enviar o forms-->
@@ -66,8 +72,25 @@
           </div>
         </form>
       </section>
-    </main>
-  </section>
-    <script src="/js/contact.js"></script>
+      </main>
+    </section>
+    </section>
+    <!--RODAPÉ DA PÁGINA-->
+    <footer>
+      <h3>EDUCAÇÃO PARA TODOS</h3>
+      <ul class="listFooter">
+        <li><a class="footerItem" href="/index.html" target="_blank">Início</a></li>
+        <li><a class="footerItem" href="/pages/about.html">Sobre</a></li>
+        <li><a class="footerItem" href="/pages/solutions.html" target="_blank">Soluções</a></li>
+        <li><a class="footerItem" href="/pages/contact.html" target="_blank">Contato</a></li>
+      </ul>
+      <p>
+        <a href="mailto:contato@squad5.gmail.com">
+          <i class="bi bi-google"></i>
+        </a>
+      </p>
+      <p id="copyright"> &copy; 2024 Todos os direitos reservados.</p>
+    </footer> 
+  <script src="/js/contact.js"></script>
   </body>
 </html>

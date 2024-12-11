@@ -70,63 +70,19 @@ const goToNext = () => {
     updateCard();
 }
 
+// Função para ir para a página contato
 const goToContact = () => {
     window.location.href = 'contact.html';
 }
   
-// Criando o layout do cartão
-document.body.innerHTML = `
-    <header>
-      <nav id="navegation">
-        <ul class="listHeader">
-          <li><a class="navItem" href="../index.html">Início</a></li>
-          <li><a class="navItem" href="about.html" target="_blank">Sobre</a></li>
-          <!-- <li><a class="navItem" href="pages/solutions.html" target="_blank">Soluções</a></li> -->
-          <li><a class="navItem" href="contact.html" target="_blank">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="container">
-        <section class="card">
-            <article class="card-header">
-                <h2 id="card-title"></h2>
-                <p id="card-description"></p>
-            </article>
-            <article class="card-footer">
-                <button id="prev-button" class="button">Previous</button>
-                <button id="next-button" class="button">Next</button>
-            </article>
-        </section>
-        <section id="cta">
-            <h2>Faça Parte da Mudança</h2>
-            <button id="ctaButton">Entre em Contato</button>
-        </section>
-    </main>
-
-    <footer>
-        <section id="mainFooter">
-            <h1>EDUCAÇÃO PARA TODOS</h1>
-            <ul class="listFooter">
-                <li><a class="footerItem" href="/index.html" target="_blank">Início</a></li>
-                <li><a class="footerItem" href="/pages/about.html">Sobre</a></li>
-                <!-- <li><a class="footerItem" href="/pages/solutions.html" target="_blank">Soluções</a></li> -->
-                <li><a class="footerItem" href="/pages/contact.html" target="_blank">Contato</a></li>
-            </ul>
-            <p>
-                <a href="mailto:contato@squad5.gmail.com">
-                    <i class="bi bi-google"></i>
-                </a>
-            </p>
-        </section>
-        <p id="copyright"> &copy; 2024 Todos os direitos reservados.</p>
-    </footer>
-`;
-  
 // Adicionando eventos aos botões
 document.getElementById("prev-button").addEventListener("click", goToPrevious);
 document.getElementById("next-button").addEventListener("click", goToNext);
-document.getElementById("ctaButton").addEventListener("click", goToContact);
+document.getElementById("btnContact").addEventListener("click", goToContact);
+const menu = document.querySelector(".navBarContainer");
+document.querySelector(".navMobile").addEventListener("click", () => {
+    menu.classList.toggle('active')
+})
   
 // Inicializando o cartão
 updateCard();

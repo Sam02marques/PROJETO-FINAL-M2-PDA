@@ -1,3 +1,4 @@
+/* Estilo geral */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 * {
     border: 0;
@@ -5,31 +6,32 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans";
-  }
+}
 
 body {
     background-color: #fafbfc;
 }
-/* header estilo */
-header{
+
+/* Header estilo */
+header {
     background-color: #050c29;
 }
 
-.listHeader{
+.listHeader {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding: 1.5rem 25rem 1.5rem 25rem ;
+    padding: 1.5rem 25rem 1.5rem 25rem;
 }
 
-.navItem{
+.navItem {
     text-decoration: none;
     color: #fafbfc;
     font-weight: bold;
     position: relative;
 }
 
-.navItem::after{
+.navItem::after {
     content: " ";
     width: 0%;
     height: 3px;
@@ -40,26 +42,34 @@ header{
     transition: 0.5s ease-in-out;
 }
 
-.navItem:hover::after{
+.navItem:hover::after {
     width: 100%;
 }
+
+
+.navMobile {
+    display: none;
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 2rem;
+    color: #fafbfc;
+    background-color: #fa8035;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
 
 /* Estilo do footer */
 footer {
     background-color: #050c29;
     padding-top: 1.8rem;
-    width: 100%;
-}
-
-footer h1{
-    font-size: 1.3rem;
-    color: #fa8035;
-}
-
-#mainFooter {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+footer h3 {
+    font-size: 1.3rem;
+    color: #fa8035;
 }
 
 .listFooter {
@@ -69,26 +79,95 @@ footer h1{
     margin: 0.9rem 0 1.3rem 0;
 }
 
-.footerItem, footer p{
+.footerItem, footer p {
     text-decoration: none;
     font-size: 0.9rem;
     color: #fafbfc;
 }
 
-footer i{
+footer i {
     font-size: 1.4rem;
     color: #fafbfc;
 }
 
-.footerItem:hover, #principalFooter p:hover, i:hover{
+.footerItem:hover, #principalFooter p:hover, i:hover {
     color: #a4a4a4;
 }
 
-#copyright{
+#copyright {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 1.2rem;
     background-color: #010720;
     height: 3rem;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.2rem;
+    }
+
+    .listFooter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #copyright {
+        height: 3rem;
+        width: 100%;
+    }
+
+    /* Header */
+
+    header{
+        position: relative;
+    }
+    
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navMobile{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+    }
+
+    nav {
+        margin-bottom: 10%;
+    }
+
+    .navBarContainer{
+        display: none;
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .listHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        gap: 3.5rem;
+    }
+
+    .navBarContainer.active{
+        display: flex;
+    }
 }

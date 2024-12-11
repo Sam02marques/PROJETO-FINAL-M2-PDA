@@ -1,303 +1,153 @@
 body {
-    height: auto;
-    width: 100vw;
-    overflow-y: auto;
-    overflow-x: hidden;
+    height: 100%;
+    background-color:#fafbfc;;
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0.5rem 0 1rem 1rem;
 }
 
-#next-button:hover, #prev-button:hover, #cta > button:hover {
-    background: #003d7e;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
-}
-
-#cta {
+#contact-card {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
-    position: relative;
+    padding: 1.1rem;
+    background-color: #050c29;
+    color: #fafbfc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    border-radius: 1rem;
     justify-content: center;
-    width: 65vw;
-    height: auto;
-    margin-top: 3rem;
-    padding-bottom: 3rem;
-    gap: 0.4rem;
-}
-
-#cta > h2 {
-    position: relative;
-    font-size: 1.7rem;
-    margin-top: 10px;
-}
-
-#cta > button {
-    background-color: rgb(0, 123, 255);
-    border: none;
-    border-radius: 6px;
-    width: 175px;
-    height: 40px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.listHeader {
-    width: 60%;
-}
-
-.listHeader > li {
-    margin: 3px 20px 3px 20px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    height: auto;
-    width: 100%;
-    background-color: #bf8d31;
+    width: 40%;
 }
 
 .card {
-    position: relative;
-    top: 5vh;
-    width: 90%;
-    height: 80%;
-    background: rgb(255, 255, 255);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    padding: 20px;
+    width: 70%;
+    margin: 4rem 0 3rem 0;
+    color: #fafbfc;
+    background-color: #050c29;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.card, main, #contact-card {
     text-align: center;
-    /* justify-content: center; */
 }
 
-.card-header h2 {
-    position: relative;
-    margin: 0 0 20px;
-    font-size: 1.5rem;
+#card-title, #contact-card > h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
 }
 
-.card-header p {
-    position: relative;
-    font-size: 1.4rem;
+#card-description {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+.button {
+    font-size: 1.3rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+    width: 13rem;
+    height: 2.6rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #fa8035;;
+}
+
+#prev-button, #next-button {
+    width: 8rem;
+    margin-bottom: 0;
 }
 
 .card-footer {
-    margin-top: 50px;
     display: flex;
     justify-content: space-between;
 }
 
-.button {
-    background: rgb(0, 123, 255);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100px;
-    height: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.card-header h2, .card-header p {
-    font-size: 1.5rem;
-    text-align: justify;
-}
-
-.listFooter{
-    align-items: center;
-    width: 60%;
-    flex-wrap: wrap;
-    gap: 5px;
-}
-
-.listFooter > li {
-    margin: 2rem 2rem 1.5rem 2rem;
-}
-
-header {
-    width: 90dvh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 footer {
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 3) {
-    /* CSS */
-}
-
-@media (min-width: 760px) {
-    body {
-        width: 100%;
-    }
-
-    header {
-        width: 100%;
-        justify-content: center;
-    }
-
-    #next-button {
-        right: 20px;
-    }
-
-    .listHeader {
-        width: 80dvw;
-        display: flex;
-        justify-content: center;
-    }
-
-    .listHeader > li {
-        margin: 10px 80px 10px 80px;
-    }
-
-    #prev-button {
-        left: 20px;
-    }
-    
-    #cta {
-        position: absolute;
-        top: 62vh;
-        height: 20vh;
-        margin-top: 2rem;
-        gap: 0.8rem;
-    }
-
-    #cta > h2 {
-        font-size: 2rem;
-    }
-
-    #cta > button {
-        height: 60px;
-        width: 250px;
-        font-size: 1.3rem;
-    }
-
-    .container {
-        height: 77vh;
+@media (max-width: 500px) {
+    nav {
+        min-height: fit-content;
+        height: 5vh;
     }
 
     .card {
-        min-height: 45vh;
+        width: 85%;
+        padding: 0.5rem;
+    }
+
+    .navBarContainer {
+        padding-top: 2rem;
         height: fit-content;
     }
 
-    .card-header h2 {
-        font-size: 2.1rem;
+    #prev-button, #next-button {
+        width: 5.5rem;
     }
 
-    .card-header p {
-        font-size: 1.6rem;
-    }
-
-    .button {
-        font-size: 1.3rem;
-        height: 45px;
-        width: 150px;
-        position: absolute;
-        bottom: 20px;
-        margin-top: 50px;
-    }
-
-    .card-header h2, .card-header p {
-        text-align: justify;
-    }
-
-    .listFooter {
-        justify-content: center;
-        gap: 3rem;
-    }
-
-    .listFooter > li > a {
-        font-size: 1.2rem;
+    #contact-card {
+        margin-bottom: 2rem;
+        width: 80%;
+        padding: 0.5rem;
     }
 }
 
-@media (min-width: 1100px) {
-    #cta {
-        position: absolute;
-        top: 73vh;
-    }
-
-    .container {
-        height: 89vh;
-    }
-
-    .listFooter {
-        justify-content: center;
-        gap: 4rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    body {
-        min-height: 100vh;
-        width: 100%;
-        overflow-y: auto;
-    }
-
-    #cta {
-        height: 22vh;
-        top: 67vh;
-        gap: 0.8rem;
-    }
-
-    .card {
-        height: 52vh;
-    }
-
-    .container {
-        height: 85vh;
-    }
-
-    .card-header h2 {
-        font-size: 2rem;
-    }
-
-    .listFooter {
-        justify-content: center;
-        gap: 5rem;
-    }
-
-    .listFooter > li > a {
-        font-size: 1.3rem;
-    }
-}
-
-@media (min-width: 1400px) {
-    #cta > button {
-        height: 60px;
-        width: 200px;
-        font-size: 1.2rem;
-    }
-
-    #cta {
-        margin-top: 3.5rem;
-        gap: 1rem;
-        padding-bottom: 1.5rem;
-    }
-
-    .button {
-        height: 50px;
-        width: 150px;   
-        font-size: 1.2rem;
-    }
-
-    .listFooter{
-        gap: 8rem;
-        justify-content: center;
-    }
-
+@media (max-width: 770px) {
     header {
         width: 100%;
+        display: flex;
+        justify-content: center;
+    } 
+
+    #contact-card {
+        margin: 1rem 1rem 3rem 1rem;
+    }
+    
+    .listHeader > li {
+        margin: 0.1rem 1rem 0.1rem 1rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    } 
+
+    main {
+        min-height: 77vh;
     }
 
-    .listHeader {
-        gap: 10rem;
+    #contact-card {
+        flex: 0.3;    
+        justify-content: center;
+        align-items: center;
+    }
+
+    .listHeader > li {
+        margin: 0.1rem 3rem 0.1rem 3rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    footer {
+        position: relative;
+    }
+
+    #contact-card {
+        margin-bottom: 2rem;
+        width: 70%;
     }
 }

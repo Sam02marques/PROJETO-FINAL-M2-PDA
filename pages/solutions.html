@@ -9,8 +9,54 @@
     <meta charset="utf-8">
   </head>
   <body>
- 
-    <script type="module" src="../js/main.js"></script>
-    <script type="module" src="../js/solutions.js"></script>
+    <header>
+      <nav>
+          <div class="navBarContainer"> <!--usado para a responsividade do menu hamburguer em mobiles-->
+              <ul class="listHeader">
+                  <li><a class="navItem" href="/index.html" target="_blank">Início</a></li>
+                  <li><a class="navItem" href="/pages/about.html" target="_blank">Sobre</a></li>
+                  <li><a class="navItem" href="/pages/solutions.html" target="_blank">Soluções</a></li>
+                  <li><a class="navItem" href="/pages/contact.html" target="_blank">Contato</a></li>
+              </ul>
+          </div>
+          <button class="navMobile">&#9776;</button> <!--botao hamburguer-->
+      </nav>
+  </header>
+
+  <main>
+      <section class="card"> <!-- cartão com o conteúdo -->
+        <article class="card-header">
+            <h2 id="card-title"></h2>
+            <p id="card-description"></p>
+        </article>
+        <article class="card-footer"> <!-- local de disposição dos botões de avançar e voltar -->
+          <button id="prev-button" class="button">Anterior</button>
+          <button id="next-button" class="button">Próximo</button>
+        </article>
+      </section>
+      <section id="contact-card"> <!-- cartão com o convite e redirecionamento para a página contato -->
+          <h2>Faça Parte da Mudança</h2>
+          <button id="btnContact" class="button">Entre em Contato</button>
+      </section>
+  </main>
+
+  <footer> 
+      <h3>EDUCAÇÃO PARA TODOS</h3>
+      <ul class="listFooter"> <!-- lista com redirecionamento de página -->
+          <li><a class="footerItem" href="/index.html" target="_blank">Início</a></li>
+          <li><a class="footerItem" href="/pages/about.html" target="_blank">Sobre</a></li>
+          <li><a class="footerItem" href="/pages/solutions.html" target="_blank">Soluções</a></li>
+          <li><a class="footerItem" href="/pages/contact.html" target="_blank">Contato</a></li>
+      </ul>
+      <p>
+          <a href="mailto:contato@squad5.gmail.com">
+          <i class="bi bi-google"></i>
+          </a>
+      </p>
+      <p id="copyright"> &copy; 2024 Todos os direitos reservados.</p>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/solutions.js"></script>
   </body>
 </html>

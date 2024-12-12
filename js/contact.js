@@ -18,3 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+// Seleciona o botão e a lista de navegação
+const navButton = document.querySelector("navMobile");
+const navBar = document.querySelector("navBarContainer");
+
+// Adiciona o evento de clique
+navButton.addEventListener("click", () => {
+  navBar.classList.toggle("active"); // Adiciona ou remove a classe "active"
+});
+
+// Fechar o menu se clicar em algum item (opcional)
+const navItems = document.querySelectorAll("listHeader li a");
+navItems.forEach(item => {
+  item.addEventListener("click", () => {
+    navBar.classList.remove("active"); // Fecha o menu
+  });
+});
+

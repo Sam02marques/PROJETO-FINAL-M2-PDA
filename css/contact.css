@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans";
+    line-height: 1.6;
 }
 body {
   min-height: 100vh;
@@ -149,11 +150,37 @@ button {
 button:hover {
   background: rgb(236, 173, 131);
 }
+
 /*Responsive*/
-@media screen and (max-width: 500px) {
-.column {
-    flex-wrap: wrap;
+
+@media (max-width: 768px) {
+  
+  .navMobile {
+    display: none;
+  }
+
+  .navMobile.active + .listHeader {
+    display: flex;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
+@media (max-width: 500px) {
+  h3, p, label {
+    font-size: 1rem;
+  }
+
+  input, textarea, select, button {
+    font-size: 0.9rem;
+  }
 }
 
 
@@ -169,6 +196,7 @@ button:hover {
   font-weight: bold;
   display: none; /* Inicialmente escondido */
   z-index: 1000;
+  
 }
 /* Estilo do footer */
 footer {

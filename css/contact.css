@@ -1,0 +1,268 @@
+/* Estilo geral */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    line-height: 1.6;
+}
+
+body {
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0px;
+  background-color: #fafbfc;
+}
+
+section h3 {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+#containerPrincipal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header estilo */
+header {
+  background-color: #050c29;
+}
+
+ul {
+  gap: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1.5rem 25rem 1.5rem 25rem;
+}
+
+.navItem {
+  text-decoration: none;
+  color: #fafbfc;
+  font-weight: bold;
+  position: relative;
+}
+
+.navItem::after {
+  content: " ";
+  width: 0%;
+  height: 3px;
+  background-color: #fafbfc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.navItem:hover::after {
+  width: 100%;
+}
+
+.navMobile {
+  display: none;
+  width: 2.8rem;
+  height: 2.8rem;
+  font-size: 2rem;
+  color: #fafbfc;
+  background-color: #fa8035;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.container .form {
+  margin-top: 30px;
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-box label {
+  color: #333;
+}
+
+:where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.column {
+  display: flex;
+  column-gap: 15px;
+}
+
+label {
+  color: #707070;
+}
+
+#select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+.input-box textarea {
+  width: 100%; 
+  max-width: 500px; 
+  min-width: 300px; 
+  padding: 10px; 
+  font-size: 16px; 
+}
+
+button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(233, 141, 81);
+}
+
+button:hover {
+  background: rgb(236, 173, 131);
+}
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+  
+  .navMobile {
+    display: none;
+  }
+
+  .navMobile.active + .listHeader {
+    display: flex;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  h3, p, label {
+    font-size: 1rem;
+  }
+
+  input, textarea, select, button {
+    font-size: 0.9rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+  }
+}
+
+
+.modal {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2cbb27;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: none; /* Inicialmente escondido */
+  z-index: 1000;
+  
+}
+/* Estilo do footer */
+footer {
+  background-color: #050c29;
+  padding-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h3 {
+  font-size: 1.3rem;
+  color: #fa8035;
+}
+
+.listFooter {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  margin: 0.9rem 0 1.3rem 0;
+}
+
+.footerItem, footer p {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #fafbfc;
+}
+
+footer a {
+  font-size: 1.4rem;
+  color: #fafbfc;
+  text-decoration: none;
+}
+
+.footerItem:hover, #principalFooter p:hover, a:hover {
+  color: #a4a4a4;
+}
+
+#copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2rem;
+  background-color: #010720;
+  height: 3rem;
+  width: 100%;
+}

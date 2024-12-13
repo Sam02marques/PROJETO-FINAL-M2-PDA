@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Título da página</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>CONTATO</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="js/main.js"></script>
-    <script src="js/interaction.js"></script>
+    <header>
+      <nav>
+        <div class="navBarContainer"> <!--usado para a responsividade do menu hamburguer em mobiles-->
+          <ul class="listHeader">
+            <li><a class="navItem" href="../index.html" target="_blank">Início</a></li>
+            <li><a class="navItem" href="about.html">Sobre</a></li>
+            <li><a class="navItem" href="solutions.html" target="_blank">Soluções</a></li>
+            <li><a class="navItem" href="contact.html" target="_blank">Contato</a></li>
+          </ul>
+        </div>
+        <button class="navMobile">&#9776;</button> <!--botao hamburguer-->
+      </nav>
+    </header>
+    <section id="containerPrincipal">
+    <section class="container">
+      <main>
+        <section>
+          <h3>Faça sua denúncia</h3>
+          <p>A partir do formulário abaixo preencha com informações a respeito de uma situação de exclusão escolar ocorrida</p>
+          <form action="/enviar" method="POST" id="denunciaForm">
+          <!--Parte do forms com o nome-->
+          <div class="input-box">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
+          </div>
+          <!--Parte do forms com o Email-->
+          <div class="input-box">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu E-mail" required>
+          </div>
+          <!--Parte do forms com o Telefone-->
+          <div class="column">
+            <div class="input-box">
+              <label for="telefone">Telefone (celular)</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="Digite seu Telefone" required>
+              </div>
+          </div>
+          <!--ASSUNTO DO FORMS-->
+          
+          <label for="tipo">Tipo de Exclusão Escolar</label>
+          <div id="select-box">
+            <select>
+              <option value="transporte">Falta de transporte escolar</option>
+              <option value="discriminacao">Discriminação</option>
+              <option value="Complicacoes financeiras">Complicações Financeiras</option>
+              <option value="infraestrutura">Infraestrutura Inadequada</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
+          <!--label para descrição-->
+          <div class="input-box">
+            <label for="descricao" id="descricaoId">Descrição do ocorrido:</label>
+            <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva aqui:"></textarea>
+          </div>
+          <!--botão para enviar o forms-->
+          <button type="submit">Enviar denúncia</button>
+          <!--modal para confirmar envio-->
+          <div id="modal" class="modal">
+            <div class="conteudo-modal"
+              <span class="close" id="closeModal">&times;</span>
+              <p>Denúncia Enviada!</p>
+            </div>
+          </div>
+        </form>
+      </section>
+      </main>
+    </section>
+    </section>
+    <!--RODAPÉ DA PÁGINA-->
+    <footer>
+      <h3>EDUCAÇÃO PARA TODOS</h3>
+      <ul class="listFooter">
+        <li><a class="footerItem" href="../index.html" target="_blank">Início</a></li>
+        <li><a class="footerItem" href="about.html">Sobre</a></li>
+        <li><a class="footerItem" href="solutions.html" target="_blank">Soluções</a></li>
+        <li><a class="footerItem" href="contact.html" target="_blank">Contato</a></li>
+      </ul>
+      <address>
+        <a href="mailto:contato@squad5.gmail.com" aria-label="Enviar email para contato@squad5.gmail.com">
+          <i class="bi bi-envelope"></i>
+          contato@squad5.gmail.com
+        </a>
+      </address>
+      <p id="copyright"> &copy; 2024 Todos os direitos reservados.</p>
+    </footer> 
+  <script src="../js/contact.js"></script>
+  <script src="../main.js"></script>
   </body>
 </html>

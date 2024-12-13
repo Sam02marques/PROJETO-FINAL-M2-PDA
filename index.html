@@ -3,29 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Inicial</title>
-  <link rel="stylesheet" href="css/global.css">
+  <title>Início</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"> <!--favicon-->
 </head>
 <body>
   <header>
     <nav>
-      <ul>
-        <!-- <li><a href="index.html">Início</a></li> -->
-        <li><a href="pages/about.html" target="_blank">Sobre</a></li>
-        <li><a href="pages/solutions.html" target="_blank">Soluções</a></li>
-        <li><a href="pages/contact.html" target="_blank">Contato</a></li>
-      </ul>
+      <div class="navBarContainer"> <!--usado para a responsividade do menu hamburguer em mobiles-->
+        <ul class="listHeader">
+          <li><a class="navItem" href="index.html" target="_blank">Início</a></li>
+          <li><a class="navItem" href="pages/about.html">Sobre</a></li>
+          <li><a class="navItem" href="pages/solutions.html" target="_blank">Soluções</a></li>
+          <li><a class="navItem" href="pages/contact.html" target="_blank">Contato</a></li>
+        </ul>
+      </div>
+      <button class="navMobile">&#9776;</button> <!--botao hamburguer-->
     </nav>
   </header>
 
   <main>
-    <h1>Bem-vindo ao meu site!</h1>
-    <p>Este é um projeto incrível com 4 páginas para abordar temas sociais importantes.</p>
+    <section id="mainSection">
+        <h1>Educação para todos</h1>
+        <h2>Solucionando a evasão escolar</h2>
+        <p>Uma proposta de hackathon desenvolvida pela Squad 5, que integra educação e tecnologia com o objetivo de transformar o mundo</p>
+        <img src="./images/index.png" alt="ilustração de uma pessoa usando um livro como asa">
+        <button id="saibaMais">Saiba mais</button>
+    </section>
   </main>
 
   <footer>
-    <p>© 2024 - Desenvolvido por SQUAD 5</p>
+    <h3>EDUCAÇÃO PARA TODOS</h3>
+    <ul class="listFooter">
+      <li><a class="footerItem" href="index.html" target="_blank">Início</a></li>
+      <li><a class="footerItem" href="pages/about.html">Sobre</a></li>
+      <li><a class="footerItem" href="pages/solutions.html" target="_blank">Soluções</a></li>
+      <li><a class="footerItem" href="pages/contact.html" target="_blank">Contato</a></li>
+    </ul>
+    <address>
+      <a href="mailto:contato@squad5.gmail.com" aria-label="Enviar email para contato@squad5.gmail.com">
+        <i class="bi bi-envelope"></i>
+        contato@squad5.gmail.com
+      </a>
+    </address>
+    <p id="copyright"> &copy; 2024 Todos os direitos reservados.</p>
   </footer>
+
+  <script src="js/script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

@@ -85,12 +85,13 @@ footer h3 {
     color: #fafbfc;
 }
 
-footer i {
-    font-size: 1.4rem;
+footer a {
+    font-size: 0.9rem;
     color: #fafbfc;
+    text-decoration: none;
 }
 
-.footerItem:hover, #principalFooter p:hover, i:hover {
+.footerItem:hover, #principalFooter p:hover, a:hover {
     color: #a4a4a4;
 }
 
@@ -131,10 +132,6 @@ footer i {
 header{
     position: relative;
 }
-nav{
-    flex-direction: column;
-    align-items: center;
-}
 
 .navMobile{
     display: flex;
@@ -146,8 +143,11 @@ nav{
 }
 
 nav{
+    min-height: fit-content;
+    height: 12vh;
     margin-bottom: 10%;
 }
+
 
 .navBarContainer{
     display: none;
@@ -173,5 +173,15 @@ nav{
 }
 
 @media (max-width: 1000px){
-    
+/* header */
+
+.listHeader{
+    padding: 1.5rem 10rem 1.5rem 10rem;;
+}
+
+main{
+min-height: 77vh;
+}
+
+
 }

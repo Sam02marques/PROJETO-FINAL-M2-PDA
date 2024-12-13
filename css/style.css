@@ -50,4 +50,21 @@ p{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.493);
 }
 
+@media (min-width: 320px) and (max-width: 1280px){
+    main{
+        width:auto ;
+        margin: 0 0.8rem 0 0.8rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    img{
+     min-width: 17rem;
+     max-width: auto;
+     margin: 0 0.2rem 0 0.2rem;
+    }
+h2{
+width: 25rem;
+}
+}
 

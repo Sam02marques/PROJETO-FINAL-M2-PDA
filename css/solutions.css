@@ -1,0 +1,153 @@
+body {
+    height: 100%;
+    background-color:#fafbfc;;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0 1rem 1rem;
+}
+
+#contact-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.1rem;
+    background-color: #050c29;
+    color: #fafbfc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.card {
+    width: 70%;
+    margin: 4rem 0 3rem 0;
+    color: #fafbfc;
+    background-color: #050c29;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.card, main, #contact-card {
+    text-align: center;
+}
+
+#card-title, #contact-card > h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+#card-description {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+.button {
+    font-size: 1.3rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+    width: 13rem;
+    height: 2.6rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #fa8035;;
+}
+
+#prev-button, #next-button {
+    width: 8rem;
+    margin-bottom: 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width: 500px) {
+    nav {
+        min-height: fit-content;
+        height: 5vh;
+    }
+
+    .card {
+        width: 85%;
+        padding: 0.5rem;
+    }
+
+    .navBarContainer {
+        padding-top: 2rem;
+        height: fit-content;
+    }
+
+    #prev-button, #next-button {
+        width: 5.5rem;
+    }
+
+    #contact-card {
+        margin-bottom: 2rem;
+        width: 80%;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 770px) {
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    } 
+
+    #contact-card {
+        margin: 1rem 1rem 3rem 1rem;
+    }
+    
+    .listHeader > li {
+        margin: 0.1rem 1rem 0.1rem 1rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    } 
+
+    main {
+        min-height: 77vh;
+    }
+
+    #contact-card {
+        flex: 0.3;    
+        justify-content: center;
+        align-items: center;
+    }
+
+    .listHeader > li {
+        margin: 0.1rem 3rem 0.1rem 3rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    footer {
+        position: relative;
+    }
+
+    #contact-card {
+        margin-bottom: 2rem;
+        width: 70%;
+    }
+}

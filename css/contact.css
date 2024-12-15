@@ -1,5 +1,6 @@
 /* Estilo geral */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     border: 0;
     margin: 0;
@@ -8,17 +9,20 @@
     font-family: "Open Sans";
     line-height: 1.6;
 }
+
 body {
   min-height: 100vh;
   flex-direction: column;
   padding: 0px;
   background-color: #fafbfc;
 }
-section h3{
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
+
+section h3 {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
+
 .container {
   position: relative;
   max-width: 700px;
@@ -30,7 +34,8 @@ section h3{
   display: flex;
   flex-direction: column;
 }
-#containerPrincipal{
+
+#containerPrincipal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,11 +45,13 @@ section h3{
 header {
   background-color: #050c29;
 }
-ul{
+
+ul {
   gap: 40px;
   display: flex;
   justify-content: center;
 }
+
 .listHeader {
   display: flex;
   justify-content: space-between;
@@ -74,7 +81,6 @@ ul{
   width: 100%;
 }
 
-
 .navMobile {
   display: none;
   width: 2.8rem;
@@ -85,16 +91,20 @@ ul{
   border-radius: 3rem;
   cursor: pointer;
 }
+
 .container .form {
   margin-top: 30px;
 }
+
 .form .input-box {
   width: 100%;
   margin-top: 20px;
 }
+
 .input-box label {
   color: #333;
 }
+
 :where(.input-box input, .select-box) {
   position: relative;
   height: 50px;
@@ -107,15 +117,17 @@ ul{
   border-radius: 6px;
   padding: 0 15px;
 }
+
 .input-box input:focus {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
+
 .column {
   display: flex;
   column-gap: 15px;
 }
 
- label {
+label {
   color: #707070;
 }
 
@@ -127,12 +139,13 @@ ul{
   color: #707070;
   font-size: 1rem;
 }
+
 .input-box textarea {
-    width: 100%; 
-    max-width: 500px; 
-    min-width: 300px; 
-    padding: 10px; 
-    font-size: 16px; 
+  width: 100%; 
+  max-width: 500px; 
+  min-width: 300px; 
+  padding: 10px; 
+  font-size: 16px; 
 }
 
 button {
@@ -147,6 +160,7 @@ button {
   transition: all 0.2s ease;
   background: rgb(233, 141, 81);
 }
+
 button:hover {
   background: rgb(236, 173, 131);
 }
@@ -180,6 +194,13 @@ button:hover {
 
   input, textarea, select, button {
     font-size: 0.9rem;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
   }
 }
 
@@ -225,12 +246,13 @@ footer h3 {
   color: #fafbfc;
 }
 
-footer i {
+footer a {
   font-size: 1.4rem;
   color: #fafbfc;
+  text-decoration: none;
 }
 
-.footerItem:hover, #principalFooter p:hover, i:hover {
+.footerItem:hover, #principalFooter p:hover, a:hover {
   color: #a4a4a4;
 }
 

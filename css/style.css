@@ -1,8 +1,8 @@
-main{
+main {
     margin: 3rem 20rem 3rem 20rem;
 }
 
-#mainSection{
+#mainSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,17 +11,16 @@ main{
     gap: 1rem;
 }
 
-
-img{
+img {
   max-width:26rem;
 }
 
-h1{
+h1 {
     color:#fa8035;
     font-size: 2.5rem;
 }
 
-h2{
+h2 {
     color: #fafbfc;
     background-color: #050c29;
     width: 28rem;
@@ -29,12 +28,12 @@ h2{
     font-size: 1.2rem;
 }
 
-p{
+p {
     color:#0e0e0e;
-    font-size: 1rem;}
+    font-size: 1rem;
+}
 
-
-#saibaMais{
+#saibaMais {
     width: 7rem;
     background-color: #050c29;
     color: #fafbfc;
@@ -44,27 +43,59 @@ p{
     transition: 0.3s ease;
 }
 
-#saibaMais:hover{
+#saibaMais:hover {
     font-size: 1.1rem;
     box-shadow: #0e0e0e;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.493);
 }
 
 @media (min-width: 320px) and (max-width: 1280px){
-    main{
-        width:auto ;
+    main {
+        width:auto;
         margin: 0 0.8rem 0 0.8rem;
         display: flex;
         flex-wrap: wrap;
     }
 
-    img{
-     min-width: 17rem;
-     max-width: auto;
-     margin: 0 0.2rem 0 0.2rem;
+    #mainSection {
+        padding-right: 0.5rem;
     }
-h2{
-width: 25rem;
-}
+
+    img {
+        min-width: 17rem;
+        max-width: auto;
+        margin: 0 0.2rem 0 0.2rem;
+    }
+
+    h2 {
+        width: 25rem;
+    }
 }
 
+@media (min-width: 1400px) and (max-width: 1980px) {
+    #mainSection {
+        height: 62vh;
+    }
+
+    img {
+        min-width: 28rem;
+        max-width: 38rem;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #saibaMais {
+        font-size: 1.3rem;
+        width: 12rem;
+    }
+
+    #saibaMais:hover {
+        font-size: 1.5rem;
+    }
+}

@@ -7,42 +7,50 @@ main {
     margin: 3rem 20rem 3rem 20rem;
 }
 
-img{
+img {
     max-width: 24rem;
     border-radius: 0.5rem;
     margin: 0.5rem 0 0.5rem 0;
 }
 
-h1{
+h1 {
     color:#010101;
     font-size: 2.5rem;
 }
 
-h2{
+h2 {
     color: #fa8035;
     font-size: 1.5rem;
 }
 
-p{
+p {
     color:#0e0e0e;
     font-size: 1rem;
 } 
 
-.texts p{
+.texts p {
     margin-top:1rem;
 }
 
-@media (min-width: 320px) and (max-width: 1280px){
-    main{
-        width:auto ;
+@media (min-width: 320px) and (max-width: 1280px) {
+    main {
+        width: 100%;
         margin: 0 0.7rem 0 0.7rem;
         display: flex;
         flex-wrap: wrap;
     }
 
-    img{
-     min-width: 17rem;
-     max-width: auto;
-     margin: 0 0.rem 0 0.2rem;
+    article {
+        padding-right: 0.8rem; 
+    }
+
+    .texts {
+        padding-right: 1rem;
+    }
+
+    img {
+        min-width: 17rem;
+        max-width: auto;
+        margin: 0 0.2rem 0 0.2rem;
     }
 }

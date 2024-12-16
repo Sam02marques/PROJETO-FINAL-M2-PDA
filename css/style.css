@@ -79,7 +79,7 @@ p {
 /* Modo escuro */
 body.dark-mode {
     background-color: #181818; 
-    color: #d1d1d1; /
+    color: #d1d1d1;
 }
 
 body.dark-mode p, 

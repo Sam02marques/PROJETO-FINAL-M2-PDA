@@ -168,23 +168,20 @@ button:hover {
 /* Modo escuro */
 body.dark-mode {
   background-color: #181818; 
-  color: #d1d1d1; /
+  color: #d1d1d1;
 }
 
-/* Alto contraste */
 body.dark-mode h3 {
   background-color: inherit;
   color: #313131; 
 }
 
-body.high-contrast form input::before,
-body.high-contrast form input::after,
-body.high-contrast form textarea::before,
-body.high-contrast form textarea::after,
-body.high-contrast form label::before,
-body.high-contrast form label::after,
-body.high-contrast form p::before,
-body.high-contrast form p::after {
+/* Alto contraste */
+body.high-contrast #containerPrincipal h3 {
+  color: #0f0f0f !important;
+}
+
+body.high-contrast #containerPrincipal p {
   color: #0f0f0f !important;
 }
 

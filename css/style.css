@@ -49,6 +49,115 @@ p {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.493);
 }
 
+/*Acessibilidade botoes*/
+.floating-controls {
+  position: fixed; 
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%); 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000; 
+}
+
+.floating-controls button {
+  background-color: #2697b9; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.floating-controls button:hover {
+  background-color: #2a618f; 
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #181818; 
+    color: #d1d1d1;
+}
+
+body.dark-mode p, 
+body.dark-mode footer, 
+body.dark-mode header, 
+body.dark-mode a {
+    background-color: inherit;
+    color: #d1d1d1; 
+}
+
+body.dark-mode #saibaMais, 
+body.dark-mode button {
+    background-color: #fa8035; 
+    color: #050c29;
+}
+
+body.dark-mode footer p#copyright {
+    color: #d1d1d1; 
+}
+
+/* Alto contraste */
+body.high-contrast {
+    background-color: #000; 
+    color: #fff;
+}
+
+body.high-contrast p, 
+body.high-contrast footer, 
+body.high-contrast header, 
+body.high-contrast a {
+    background-color: inherit; 
+    color: rgb(255, 255, 85);
+}
+
+body.high-contrast h1, 
+body.high-contrast h2,
+body.high-contrast h3 {
+    background-color: inherit;
+    color: rgb(179, 179, 2);
+}
+
+body.high-contrast a {
+    color: #ff0;
+}
+
+body.high-contrast #saibaMais, 
+body.high-contrast button {
+    background-color: #ff0; 
+    color: #000;
+}
+
+body.high-contrast footer p#copyright {
+    color: #fff; 
+}
+
+/* Ajuste para o zoom */
+body.zoom-in {
+    font-size: 110%; 
+    transform: scale(1.1); 
+    transform-origin: top left;
+    transition: transform 0.3s ease, font-size 0.3s ease; 
+}
+
+body.zoom-out {
+    font-size: 90%; 
+    transform: scale(0.9); 
+    transform-origin: top left; 
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+body.zoom-in img {
+    width: 110%;
+}
+
+body.zoom-out img {
+    width: 90%; 
+}
+
 @media (min-width: 320px) and (max-width: 1280px){
     main {
         width:auto;

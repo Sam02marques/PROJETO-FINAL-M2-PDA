@@ -165,8 +165,28 @@ button:hover {
   background: rgb(236, 173, 131);
 }
 
-/*Responsive*/
+/* Modo escuro */
+body.dark-mode {
+  background-color: #181818; 
+  color: #d1d1d1;
+}
 
+body.dark-mode h3 {
+  background-color: inherit;
+  color: #313131; 
+}
+
+/* Alto contraste */
+body.high-contrast #containerPrincipal h3 {
+  color: #0f0f0f !important;
+}
+
+body.high-contrast #containerPrincipal p {
+  color: #0f0f0f !important;
+}
+
+
+/*Responsive*/
 @media (max-width: 768px) {
   
   .navMobile {

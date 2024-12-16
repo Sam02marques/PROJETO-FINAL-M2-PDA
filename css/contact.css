@@ -177,14 +177,19 @@ body.dark-mode h3 {
   color: #313131; 
 }
 
-body.high-contrast p,
-body.high-contrast h3 {
-  color: #0f0f0f
+body.high-contrast form input::before,
+body.high-contrast form input::after,
+body.high-contrast form textarea::before,
+body.high-contrast form textarea::after,
+body.high-contrast form label::before,
+body.high-contrast form label::after,
+body.high-contrast form p::before,
+body.high-contrast form p::after {
+  color: #0f0f0f !important;
 }
 
 
 /*Responsive*/
-
 @media (max-width: 768px) {
   
   .navMobile {

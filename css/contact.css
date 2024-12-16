@@ -165,6 +165,24 @@ button:hover {
   background: rgb(236, 173, 131);
 }
 
+/* Modo escuro */
+body.dark-mode {
+  background-color: #181818; 
+  color: #d1d1d1; /
+}
+
+/* Alto contraste */
+body.dark-mode h3 {
+  background-color: inherit;
+  color: #313131; 
+}
+
+body.high-contrast p,
+body.high-contrast h3 {
+  color: #0f0f0f
+}
+
+
 /*Responsive*/
 
 @media (max-width: 768px) {
